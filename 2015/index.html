@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		<title>Turansky Design</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+		<link rel="stylesheet" type="text/css" href="css/style1.css"></link>
+		<link rel="stylesheet" type="text/css" href="css/thirdeffect.css"></link>
+
+		<link rel="icon" type="image/png" href="images/favicon.png">
+
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="dist/css/lightbox.css">
+
+		<style type="text/css">
+
+		h1 {
+			font-size: 50px;
+			font-family: Open Sans;
+			font-weight: 300;
+			color: #333333;
+			margin: 0;
+			padding: 0;
+
+		}
+
+		h2 {
+			font-size: 40px;
+			font-family: Open Sans;
+			font-weight: 800;
+			color: #ff9933;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		h3 {
+			font-size: 68px;
+			font-family: Open Sans;
+			font-weight: 800;
+			color: white;
+		}
+
+		h4 {
+			font-size: 30px;
+			font-family: Open Sans;
+			font-weight: 800;
+			color: white;
+			margin: 0px;
+			padding: 0px;
+
+		}
+
+		h5 {
+			font-size: 15px;
+			font-family: Open Sans;
+			font-weight: 300;
+			color: #cccccc;
+			margin: 0px;
+			padding: 0px 0px 0px 0px; 
+		}
+
+		h6 {
+			font-size: 20px;
+			font-family: Open Sans;
+			font-weight: 600;
+			color: #666666;
+			margin: -18px 0px -15px 0px;
+			padding: 0px 0px 0px 0px; 
+		}
+
+		h7 {
+			font-size: 22px;
+			font-family: Open Sans;
+			font-weight: 300;
+			color: white;
+			margin: 0px 0px 0px 0px;
+			padding: 0px 0px 0px 0px; 
+		}
+
+		p {
+			font-size: 18px;
+			font-family: Open Sans;
+			font-weight: 300;
+			color: #333333;
+			line-height: 32px;
+			margin: 10px 0px 0px 0px;
+			padding: 0px;
+		}
+
+		a {
+			text-decoration: none;
+			color: #cccccc;
+		}
+
+		/* rotator in-page placement */
+	    div.rotator {
+		position:relative;
+		height:80px;
+		display:none;
+		}
+	/* rotator css */
+		div.rotator ul {
+		margin:0;
+		padding:0;
+		}
+		div.rotator ul li {
+		float:left;
+		position:absolute;
+		list-style: none;
+		}
+
+		.smoothScroll {
+		  text-decoration: none;
+			font-family: Segoe UI;
+		  margin: 0px;
+		}
+		.title {
+		  text-decoration: none;
+			font-family: Segoe UI;
+		  margin: 24px;
+		}
+		.content {
+		  margin-top: 100%;
+		  margin-bottom: 100%;
+		}
+		small {
+		  margin-left: 24px;
+		  color: gray;
+		}
+
+		</style>
+
+		<script type="text/javascript" src="js/rotator.js"></script>
+
+			<!-- By Dylan Wagstaff, http://www.alohatechsupport.net -->
+			<script type="text/javascript">
+			function theRotator() {
+				//Set the opacity of all images to 0
+				$('div.rotator ul li').css({opacity: 0.0});
+				
+				//Get the first image and display it (gets set to full opacity)
+				$('div.rotator ul li:first').css({opacity: 1.0});
+					
+				//Call the rotator function to run the slideshow, 6000 = change to next image after 6 seconds
+				
+			    if ($('div.rotator ul li').length > 1) {
+			    setTimeout('rotate()', 2000);
+			}
+			}
+
+			function rotate() {	
+				//Get the first image
+				var current = ($('div.rotator ul li.show')? $('div.rotator ul li.show') : $('div.rotator ul li:first'));
+
+			    if ( current.length == 0 ) current = $('div.rotator ul li:first');
+
+				//Get next image, when it reaches the end, rotate it back to the first image
+				var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div.rotator ul li:first') :current.next()) : $('div.rotator ul li:first'));
+				
+				//Un-comment the 3 lines below to get the images in random order
+				
+				//var sibs = current.siblings();
+			    //var rndNum = Math.floor(Math.random() * sibs.length );
+			    //var next = $( sibs[ rndNum ] );
+						
+
+				//Set the fade in effect for the next image, the show class has higher z-index
+				next.css({opacity: 0.0}).addClass('show').animate({opacity: 1.0}, 1000);
+
+				//Hide the current image
+				current.animate({opacity: 0.0}, 1000, function(){setTimeout('rotate()', 2000);}) .removeClass('show');
+				
+			};
+
+			$(document).ready(function() {		
+				//Load the slideshow
+				theRotator();
+				$('div.rotator').fadeIn(1000);
+			    $('div.rotator ul li').fadeIn(1000); // tweek for IE
+			});
+		</script>
+
+		<script type="text/javascript">
+
+				$(function() {
+			  // This will select everything with the class smoothScroll
+			  // This should prevent problems with carousel, scrollspy, etc...
+			  $('.smoothScroll').click(function() {
+			    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			      if (target.length) {
+			        $('html,body').animate({
+			          scrollTop: target.offset().top
+			        }, 1000); // The number here represents the speed of the scroll in milliseconds
+			        return false;
+			      }
+			    }
+			  });
+			});
+
+			// Change the speed to whatever you want
+			// Personally i think 1000 is too much
+			// Try 800 or below, it seems not too much but it will make a difference
+
+		</script>
+
+
+	</head>
+
+	<body id="body">
+
+		<div id="container">
+
+			<a class="smoothScroll" href="#body">
+				<div id="logo">
+					<img src="images/logo.png">
+				</div>
+			</a>
+
+<!--start home-->
+			<div id="home">
+				<div class="animate">
+
+	<!--rotator-->	<div class="rotator">
+						<ul>
+						    <li class="show">
+						    	<img src="images/title_brand.png" alt="brand"/>
+						    </li>
+						    <li>
+						    	<img src="images/title_ux.png" alt="ux"/>
+						    </li>
+						    <li>
+						    	<img src="images/title_visual.png" alt="visual" />
+						    </li>
+						    <li>
+						    	<img src="images/title_turansky.png" walt="turansky"/>
+						    </li>
+						</ul>
+
+					</div>
+<!--rotator-->
+					
+				</div>
+
+					<div class="line_title" >
+						<hr noshade size="3" width="182" color="cccccc">
+					</div>
+
+				<a class="smoothScroll" href="#about">
+					<div class="more"> 
+						<img src="images/arrow.png">
+					</div>
+				</a>
+			</div>
+<!--end home-->
+
+<!--start about-->
+			<div id="about">
+				<div class="title">
+					<h1>ABOUT</h1>
+					<hr noshade size="3" width="67" color="ff9933">
+				</div>
+				
+				<div id="about_content">
+					<div id="sidebar_1">
+
+						<div class="icon_skills">
+							<img src="images/skills_icon.png">
+						</div>
+
+						<div class="passions" style="text-align: right;">
+							<h2 >PASSIONS</h2>
+							
+							<p>While I am very passionate about design and photography, I have an appreciation for motion graphics, and front-end web development. I always want to consumer new information so I am currently furthering myself in website and application development. </p>
+						</div>
+
+					</div>
+
+					<div id="line"> 
+						<img src="images/about_line.png">
+					</div>
+
+					<div id="sidebar_2">
+
+						<div class="skills">
+							<h2>SKILLS</h2>
+							
+							<p>I am a visual designer and photographer. I am skilled in all design ranging from print to interactive design, I also have great strength in photography and videography. I am always curious to broaden my knowledge in web design and development.  </p>
+						</div>
+
+						<div class="icon_passions">
+							<img src="images/passions_icon.png">
+						</div>
+
+					</div>
+				</div>
+			</div>
+<!--end about-->
+
+<!--start resume-->
+			<div id="resume">
+				<div class="title">
+					<h1 style="color: white;">RESUME</h1>
+					<hr noshade size="3" width="67" color="ff9933">
+				</div>
+
+				<div id="resume_content">
+					<div class="resume_left"> 
+						<div class="dates_1"> <h3>2015</h3> </div>
+						<div class="dates"> <h3>2012</h3> </div>
+						<div class="dates"> <h3>2011</h3> </div>
+						<div class="dates_2"> <h3>2016</h3> </div>
+					</div>
+
+					<div id="timeline"> <img src="images/timeline.png" style="padding-top: 159px;"></div>
+
+					<div class="resume_right"> 
+
+						<div class="experience"> <h2 style="font-weight: 300; color: white;"> EXPERIENCE </h2> </div>
+
+						<div class="jobs_1"> 
+							<h4>VISCOM CENTER</h4> <br>
+							<h6><em>Visual Designer & Photographer </em></h6><br>
+							<h5 style="color: white;">Created brand identities, logo, website, design, print and digital advertisement for small businesses and professionals.</h5>
+						</div>
+
+						<div class="jobs"> 
+							<h4>CSUN ATHLETICS </h4><br>
+							<h6><em>Graphic Designer & Photographer </em></h6><br>
+							<h5 style="color: white;">Designed media campaigns for various games and events. Was project lead of rebranding of Matador baseball stadium bleacher wrap and press box.</h5>
+						</div>
+
+						<div class="jobs"> 
+							<h4>FREELANCE</h4> <br>
+							<h6><em>Visual Designer </em></h6><br>
+							<h5 style="color: white;">Worked with make companies and professionals to develop websites, design print media, and 
+							conceived brand identities.</h5>
+						</div>
+
+						<div class="education"> 
+							<h2 style="font-weight: 300; color: white;"> EDUCATION </h2>
+						</div>
+
+						<div class="jobs_1"> 
+							<h4 style="line-height: 33px;">BACHELOR OF ARTS <br> MINOR MARKETING</h4> <br>
+							<h6><em>Cal State University, Northridge</em></h6><br>
+						</div>
+
+					</div>
+				</div>
+
+				<a href="pdf/Turansky_Resume_2015.pdf">
+					<div class="download"> 
+						<p style="color:white; margin-top: 7px;">DOWNLOAD FULL RESUME 
+						</p> 
+					</div>
+				</a>
+
+			</div>
+<!--end resume-->
+
+<!--start work-->
+			<div id="work" >
+				<div id="title">
+					<h1 style="color: #333333;">WORK</h1>
+					<hr noshade size="3" width="67" color="ff9933" style="margin-bottom: 120px;">
+				</div>
+
+				<div class="thumbs"> 
+					<h2 style="font-weight: 300; color: #333333; margin-bottom: 60px;"> BRANDING </h2> 
+				</div>
+
+				
+					<div class="view third-effect">
+						<div  id="thumbs1">
+							<a class="example-image-link" href="images/poi/poi_1.jpg" data-lightbox="example" data-title="POI Stationary">
+								<img class="example-image" src="images/poi.jpg" width="100%" alt=""/></a>
+		      				<a class="example-image-link" href="images/poi/poi_2.jpg" data-lightbox="example" data-title="POI Powerpoint Cover">
+		      				<a class="example-image-link" href="images/poi/poi_3.jpg" data-lightbox="example" data-title="POI Business Cards">
+		      				<a class="example-image-link" href="images/poi/poi_4.jpg" data-lightbox="example" data-title="POI Envelope">
+		      				<a class="example-image-link" href="images/poi/poi_5.jpg" data-lightbox="example" data-title="POI ">
+		      				</a>
+		      			</div>
+	      			</div>
+
+	      			<div class="view third-effect">
+						<div  id="thumbs1">
+							<a class="example-image-link" href="images/u/u_1.jpg" data-lightbox="example" data-title="Ugenesis Logo">
+								<img class="example-image" src="images/u.jpg" width="100%" alt=""/></a>
+		      				<a class="example-image-link" href="images/u/u_2.jpg" data-lightbox="example" data-title="Ugenesis Business Cards">
+		      				<a class="example-image-link" href="images/u/u_3.jpg" data-lightbox="example" data-title="Ugenesis Cover">
+		      				<a class="example-image-link" href="images/u/u_4.jpg" data-lightbox="example" data-title="Ugenesis Spread">
+		      				</a>
+		      			</div>
+	      			</div>
+
+	      			<div class="thumbs" style="margin-top: 100px;"> 
+						<h2 style="font-weight: 300; color: #333333; margin-bottom: 60px;"> PHOTOGRAPHY </h2> 
+					</div>
+
+					<div class="view third-effect">
+						<div  id="thumbs1">
+							<a class="example-image-link" href="images/p/p_1.jpg" data-lightbox="example" data-title="">
+								<img class="example-image" src="images/p.jpg" alt=""/></a>
+		      				<a class="example-image-link" href="images/p/p_2.jpg" data-lightbox="example" data-title="">
+		      				<a class="example-image-link" href="images/p/p_3.jpg" data-lightbox="example" data-title="">
+		      				<a class="example-image-link" href="images/p/p_4.jpg" data-lightbox="example" data-title="">
+		      				<a class="example-image-link" href="images/p/p_5.jpg" data-lightbox="example" data-title="">
+		      				</a>
+		      			</div>
+	      			</div>
+
+	      			<div class="view third-effect">
+						<div  id="thumbs1">
+							<a class="example-image-link" href="images/p2/p_1.jpg" data-lightbox="example" data-title="">
+								<img class="example-image" src="images/p2.jpg" alt=""/></a>
+		      				<a class="example-image-link" href="images/p2/p_2.jpg" data-lightbox="example" data-title="">
+		      				<a class="example-image-link" href="images/p2/p_3.jpg" data-lightbox="example" data-title="">
+		      				<a class="example-image-link" href="images/p2/p_4.jpg" data-lightbox="example" data-title="">
+		      				</a>
+		      			</div>
+	      			</div>
+
+
+
+				
+			</div>
+<!--end work-->
+
+<!--start contact-->
+			<div id="contact">
+				<div id="title">
+					<h1 style="color: #cccccc;">CONTACT</h1>
+					<hr noshade size="3" width="67" color="ff9933" style="margin-bottom: 120px;">
+				</div>
+
+			<form name="contactform" method="post" action="php/send_form_email.php">
+
+				<div><label for="first_name">
+					<h7>NAME</h7></label></div>
+
+				<div><input type="text" name="first_name" maxlength="50" size="30"></input></div>
+
+				<div><label for="last_name">
+					<h7>EMAIL</h7></label></div>
+
+				<div><input type="text" name="email" maxlength="50" size="30"></input></div>
+
+				<div><label for="comments"><h7>COMMENTS</h7></label></div>
+				<div><textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea></div>
+
+				<div><input class="button" type="submit" value="SUBMIT"></input></input></div>
+
+			</form>
+
+			</div>
+<!--end contact-->
+
+<!--start footer-->
+			<div id="footer">
+				<div id="rights">
+					<p style="font-size: 15px;">CHARLES TURANSKY &copy 2015. ALL RIGHTS RESERVED</p> 
+				</div>
+
+				<div id="thumbrow">
+					<div class="icon">
+						<a href="https://www.linkedin.com/pub/chas-turansky/100/777/b50" target="blank"><img src="images/linkedin.png"></a></div>
+					<div class="icon">
+						<a href="https://www.behance.net/chasturansky" target="blank"> <img src="images/behance_icon.png"></a></div>
+					<div class="icon">
+						<a href="mailto:chasturasnky@gmail.com"><img src="images/mail_icon.png"></div>
+				</div>
+			</div>
+<!--end footer-->
+
+		</div>
+
+		<script src="dist/js/lightbox-plus-jquery.min.js"></script>
+
+
+	</body>
+</html>

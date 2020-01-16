@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="378 1406 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e8e8e8;
+        stroke: #e8e8e8;
+      }
+
+      .cls-2 {
+        fill: #f8007e;
+      }
+
+      .cls-3 {
+        fill: #0b62ce;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_121" data-name="Group 121" transform="translate(0 861)">
+    <g id="Ellipse_8" data-name="Ellipse 8" class="cls-1" transform="translate(378 545)">
+      <circle class="cls-4" cx="15" cy="15" r="15"/>
+      <circle class="cls-5" cx="15" cy="15" r="14.5"/>
+    </g>
+    <g id="Group_81" data-name="Group 81" transform="translate(386 557)">
+      <ellipse id="Ellipse_9" data-name="Ellipse 9" class="cls-2" cx="3.388" cy="3.388" rx="3.388" ry="3.388" transform="translate(8.007 0)"/>
+      <ellipse id="Ellipse_10" data-name="Ellipse 10" class="cls-3" cx="3.388" cy="3.388" rx="3.388" ry="3.388" transform="translate(0 0)"/>
+    </g>
+  </g>
+</svg>
