@@ -1,0 +1,38 @@
+// Variables
+// Colors
+$yellow: #FCC104;
+$black: #181819;
+$white: #ffffff;
+$color-grey: #6e7880;
+
+// Type
+$hl-font: "acumin-pro", sans-serif !important;
+
+// Misc
+$ease: cubic-bezier(.694,.048,.335,1);
+
+
+// Imports
+@import
+  "utilities/normalize.scss",
+  "utilities/global.scss",
+  "utilities/animations.scss",
+  "utilities/smooth-state.scss",
+  "utilities/svg.scss";
+
+@import
+  "components/type.scss",
+  "components/button.scss",
+  "components/loading-screen.scss",
+  "components/carousel-controls.scss",
+  "components/nav.scss",
+  "components/arrow.scss";
+
+@import
+  "pages/intro.scss",
+  "pages/home.scss",
+  "pages/mission.scss",
+  "pages/work.scss",
+  "pages/playground.scss",
+  "pages/contact.scss",
+  "pages/menu.scss";

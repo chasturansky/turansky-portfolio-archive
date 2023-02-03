@@ -1,0 +1,100 @@
+// Type Styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: $hl-font;
+  font-weight: normal;
+  margin: 0px;
+}
+h1 {
+  font-size: 7.2em;
+  line-height: 1;
+}
+h2 {
+  font-size: 4.8em;
+  line-height: 1;
+  // letter-spacing: -1.75;
+}
+h3 {
+  font-size: 3.6em;
+  line-height: 1;
+}
+h4 {
+  font-size: 2.4em;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+h6 {
+  font-size: 1.4em;
+  line-height: 1;
+}
+p {
+  font-size: 1.6em;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+// Sizes
+.size-16 {
+  font-size: 16px;
+}
+.size-30 {
+  font-size: 30px;
+}
+.size-60 {
+  font-size: 60px;
+}
+
+// Font Styles
+.weight-black {
+  font-weight: 800;
+}
+.weight-bold {
+  font-weight: 700;
+}
+.weight-semibold {
+  font-weight: 600;
+}
+.weight-light {
+  font-weight: 300;
+}
+.weight-extralight {
+  font-weight: 200;
+}
+.weight-italic {
+  font-style: italic;
+}
+
+// Colors
+// .color-grey-lightest {
+//   color: $grey-lightest;
+// }
+// .color-grey-lighter {
+//   color: $grey-lighter;
+// }
+// .color-grey {
+//   color: $grey;
+// }
+// .color-grey-darker {
+//   color: $grey-darker;
+// }
+.color-black {
+  color: $black;
+}
+.color-white {
+  color: $white;
+}
+.color-yellow {
+  color: $yellow;
+}
+.color-grey {
+  color: $color-grey;
+}

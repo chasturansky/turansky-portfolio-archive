@@ -1,0 +1,117 @@
+.playground {
+  height: calc(100vh);
+  width: calc(150%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 1130px) {
+    width: 175%;
+  }
+
+  @media (max-width: 950px) {
+    width: 250%;
+  }
+
+  @media (max-width: 670px) {
+    width: 350%;
+  }
+
+  @media (max-width: 540px) {
+    width: 375%;
+  }
+
+  @media (max-width: 440px) {
+    width: 400%;
+  }
+
+  // @media (max-width: 400px) {
+  //   width: 500%;
+  // }
+}
+
+.playground-container {
+  background: $black;
+  margin: 15px 0px;
+  border-radius: 25px;
+  height: calc(100% - 30px);
+  width: calc(70%);
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  .text {
+    width: 350px;
+    margin-right: 80px;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    h5 {
+      margin-bottom: 30px;
+    }
+  }
+
+  .progress {
+    width: 600px;
+
+    @media (max-width: 540px) {
+      width: 400px;
+    }
+
+    @media (max-width: 440px) {
+      width: 330px;
+    }
+  }
+}
+
+.project-roadmap {
+  margin-bottom: 30px;
+
+  h4 {
+    margin-bottom: 14px;
+  }
+}
+.progress-bar-container {
+  display: flex;
+  
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  .research {
+    width: 150px;
+    margin-right: 6px;
+  }
+
+  .production {
+    width: 300px;
+    margin-right: 6px;
+  }
+
+  .support {
+    width: 150px;
+  }
+
+  .bar {
+    height: 30px;
+    background-color: rgba(#E6E9EB, .2);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: var(--bar-width);
+      height: 100%;
+      background: $yellow;
+      border-radius: 6px;
+    }
+  }
+}

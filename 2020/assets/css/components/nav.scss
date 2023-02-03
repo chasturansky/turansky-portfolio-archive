@@ -1,0 +1,137 @@
+// Nav
+.nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 700;
+}
+
+
+// Brand
+.brand {
+  display: block;
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  z-index: 700;
+  .icon {
+    transition: 300ms;
+  }
+
+  &.is-inverse {
+    transition: 300ms;
+    .icon {
+      fill: $white;
+      transition: 300ms;
+    }
+  }
+}
+
+// Menu Icon
+.menu {
+  z-index: 900;
+}
+
+
+// Old Sites
+.archive {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 700;
+  a {
+    display: block;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 16px;
+    margin-top: 20px;
+    transform: rotate(-90deg);
+    color: $black;
+    transition: 300ms;
+    opacity: .1;
+    font-family: $hl-font;
+    &:hover {
+      opacity: 1;
+      transition: 300ms;
+    }
+    &.is-active {
+      opacity: 1;
+    }
+  }
+  &.is-inverse {
+    a {
+      color: $white;
+      transition: 300ms;
+    }
+  }
+}
+
+
+// Menu
+.hamburger {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 28px;
+  height: 28px;
+  z-index: 800;
+  .bar {
+    width: 25px;
+    height: 3px;
+    background: $black;
+    border-radius: 1.5px;
+    margin: 8px 2px;
+    transition: 300ms;
+    transition-timing-function: $ease;
+  }
+  &:hover > .bar {
+    transition: 300ms;
+    transition-timing-function: $ease;
+  }
+  &.inverse {
+    .bar {
+      background: $white;
+      transition: 300ms;
+    }
+  }
+
+  &.active {
+    .bar {
+      &:first-child {
+        transform: rotate(45deg) translate(4px, 4px);
+      }
+      &:last-child {
+        transform: rotate(-45deg) translate(3px, -4px);
+      }
+    }
+  }
+}
+
+
+// Socials
+.socials {
+  position: fixed;
+  bottom: 20px;
+  right: 24px;
+  z-index: 700;
+  a {
+    display: block;
+    margin-bottom: 14px;
+    .icon {
+      transition: 300ms;
+    }
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  &.is-inverse {
+    a {
+      .icon {
+        fill: $white;
+        transition: 300ms;
+      }
+    }
+  }
+}

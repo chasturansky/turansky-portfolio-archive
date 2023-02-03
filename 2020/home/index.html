@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Turansky</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../assets/images/favicon.ico">
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Typekit -->
+  <script src="https://use.typekit.net/xwe2qxj.js"></script>
+  <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+  <!-- Cookies -->
+  <script src="../assets/js/cookies.js"></script>
+</head>
+
+<body class="scroll-container" onload="checkCookieHome()">
+  <!-- Turansky Logo -->
+  <a class="brand">
+    <svg id="logo" class="icon is-default">
+      <use xlink:href="#turanskyLogo"></use>
+    </svg>
+  </a>
+  <!-- Menu -->
+  <div onclick="blurContent()" class="menu">
+    <div id="hamburger" class="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+  <!-- Menu -->
+  <div id="menu" class="menu-modal">
+    <div>
+      <!-- <a href="../home"><h2 class="weight-black">Home</h2></a>
+      <a href="../work"><h2 class="weight-black">Projects</h2></a>
+      <a href="../about"><h2 class="weight-black">About</h2></a> -->
+      <a href="http://nikao.io" target="_blank">
+        <h2 class="weight-black">Nikao</h2>
+      </a>
+      <a href="http://mind.exchange" target="_blank">
+        <h2 class="weight-black">MIND</h2>
+      </a>
+      <a href="http://rumnco.com" target="_blank">
+        <h2 class="weight-black">Rum & Co.</h2>
+      </a>
+      <a href="http://picturethis.productions" target="_blank">
+        <h2 class="weight-black">Picture This</h2>
+      </a>
+      <div class="subcat">
+        <a href="../photo/" class="">
+          <h4>Photo & Video</h4>
+        </a>
+      </div>
+      <div class="subcat-social">
+        <a href="https://twitter.com/chasturansky" target="_blank">
+          <svg class="icon is-medium">
+            <use xlink:href="#twitter"></use>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/chasturansky/" target="_blank">
+          <svg class="icon is-medium">
+            <use xlink:href="#linkedin"></use>
+          </svg>
+        </a>
+        <a href="https://dribbble.com/chasturansky" target="_blank">
+          <svg class="icon is-medium">
+            <use xlink:href="#dribbble"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="blurredContainer">
+    <div class="landing">
+      <div class="hello-container">
+        <div class="hello-message">
+          <h1 id="userName" class="weight-black">Hello</h1>
+          <h3 class="weight-black">Welcome to my website.</h3>
+          <a class="button" href="mailto:chas@turansky.net">Contact Me</a>
+        </div>
+        <div class="hello-image"></div>
+      </div>
+      <div class="cta-block">
+        <div class="cta-mobile">
+          <ul>
+            <li class="cta-item-article">
+              <a class="" href="https://blog.nikao.io/articles/2018/03/28/mailgun-contact-form.html" target="_blank">
+                <div class="cta-item">
+                  <div class="text">
+                    <h6>Latest Article</h6>
+                    <h4 class="weight-black">Build a Contact Form Using Mailgun</h4>
+                  </div>
+                  <div class="date">
+                    <p class="weight-semiblack">Mar. 28th</p>
+                    <div class="arrow">
+                      <div class="diagonal"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <!-- <li class="cta-item-project">
+              <a class="" href="https://www.behance.net/gallery/44767349/Orderup-UI-UX-App-Design" target="_blank">
+                <div class="cta-item">
+                  <div class="text">
+                    <h6>Project</h6>
+                    <h4 class="weight-black">Orderup: Mobile Food Ordering App</h4>
+                  </div>
+                  <div class="date">
+                    <p class="weight-semiblack">Nov. 4th</p>
+                    <div class="arrow">
+                      <div class="diagonal"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li> -->
+          </ul>
+          <!-- <div class="cta-mobile-controls">
+            <div class="carousel-controls">
+              <p class="weight-black">01</p>
+              <div class="progress-bar"></div>
+              <p class="weight-black">02</p>
+            </div>
+          </div> -->
+        </div>
+        <div class="cta-desktop">
+          <div class="cta-item-article">
+            <a class="" href="https://blog.nikao.io/articles/2018/03/28/mailgun-contact-form.html" target="_blank">
+              <div class="cta-item">
+                <div class="text">
+                  <h6>Latest Article</h6>
+                  <h4 class="weight-black">Build a Contact Form Using Mailgun</h4>
+                </div>
+                <div class="date">
+                  <p class="weight-semiblack">Mar. 28th</p>
+                  <div class="arrow">
+                    <div class="diagonal"></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="cta-item-project">
+            <a class="" href="https://www.behance.net/gallery/44767349/Orderup-UI-UX-App-Design" target="_blank">
+              <div class="cta-image" style="background-image:url('../assets/images/orderup-preview.png')"></div>
+              <div class="cta-item">
+                <div class="text">
+                  <h6>Project</h6>
+                  <h4 class="weight-black">Orderup: Mobile Food Ordering App</h4>
+                </div>
+                <div class="date">
+                  <p class="weight-semiblack">Nov. 4th</p>
+                  <div class="arrow">
+                    <div class="diagonal"></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Mission -->
+    <div class="mission">
+      <div class="mission-container">
+        <h2>I’m a digital <span class="weight-black color-black">product designer</span> based in the bay area currently
+          working at <a class="social-link weight-black color-black" style="--hover: #D52D20;"
+            href="https://www.verizonmedia.com/" target="_blank">Verizon Media</a> on their internal core platforms.
+        </h2>
+        <a class="button outline" href="mailto:chas@turansky.net">Lets Chat</a>
+      </div>
+    </div>
+    <!-- Work -->
+    <div class="work">
+      <div class="project-container">
+        <div class="project-row">
+          <a class="project" data-tilt data-tilt-scale="1.05"
+            href="https://www.behance.net/gallery/44767349/Orderup-UI-UX-App-Design" target="_blank"
+            style="background: #9f424e url('../assets/images/Orderup@2x.png');">
+            <h6 class="color-white">Product Design</h6>
+            <h4 class="weight-black color-white">Order Up: Mobile Ordering App</h4>
+            <div class="arrow">
+              <div class="diagonal"></div>
+            </div>
+          </a>
+          <a class="project" data-tilt data-tilt-scale="1.05"
+            href="https://www.behance.net/gallery/44766491/Viewpoint-Tours-360-Tour-App" target="_blank"
+            style="background: #8dc640 url('../assets/images/Viewpoint@2x.png');">
+            <h6 class="color-white">Product Design</h6>
+            <h4 class="weight-black color-white">Viewpoint Tours: 360 Tours App</h4>
+            <div class="arrow">
+              <div class="diagonal"></div>
+            </div>
+          </a>
+          <a class="project" data-tilt data-tilt-scale="1.05" href="https://bootcats.com/" target="_blank"
+            style="background: #ff6569 url('../assets/images/BootCats@2x-cover.png');">
+            <h6 class="color-white">Product Design</h6>
+            <h4 class="weight-black color-white">BootCats: Themeable CSS Web App </h4>
+            <div class="arrow">
+              <div class="diagonal"></div>
+            </div>
+          </a>
+        </div>
+        <!-- <a class="button outline" href="#work">View All Work</a> -->
+      </div>
+    </div>
+    <!-- Playground -->
+    <div class="playground">
+      <div class="playground-container" id="darkContainer">
+        <div class="text">
+          <h2 class="color-white weight-black">Playground</h2>
+          <h5 class="color-white">This stuff is happening right now. You can walk over to my desk to get the latest
+            work. Or a cute gif.
+          </h5>
+          <a class="button outline inverse" href="mailto:chas@turansky.net">Help Out</a>
+        </div>
+        <div class="progress">
+          <div class="project-roadmap">
+            <h4 class="color-white weight-bold">Polytasks</h4>
+            <div class="progress-bar-container">
+              <div class="research">
+                <div class="bar" style="--bar-width: 100%;"></div>
+                <h6 class="color-white">Research</h6>
+              </div>
+              <div class="production">
+                <div class="bar" style="--bar-width: 12%;"></div>
+                <h6 class="color-white">Production + Feedback</h6>
+              </div>
+              <div class="support">
+                <div class="bar" style="--bar-width: 0%;"></div>
+                <h6 class="color-white">Dev Support</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-roadmap">
+            <h4 class="color-white weight-bold">Whiteboard</h4>
+            <div class="progress-bar-container">
+              <div class="research">
+                <div class="bar" style="--bar-width: 100%;"></div>
+                <h6 class="color-white">Research</h6>
+              </div>
+              <div class="production">
+                <div class="bar" style="--bar-width: 56%;"></div>
+                <h6 class="color-white">Production + Feedback</h6>
+              </div>
+              <div class="support">
+                <div class="bar" style="--bar-width: 0%;"></div>
+                <h6 class="color-white">Dev Support</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-roadmap">
+            <h4 class="color-white weight-bold">Bondfire.io</h4>
+            <div class="progress-bar-container">
+              <div class="research">
+                <div class="bar" style="--bar-width: 45%;"></div>
+                <h6 class="color-white">Research</h6>
+              </div>
+              <div class="production">
+                <div class="bar" style="--bar-width: 0%;"></div>
+                <h6 class="color-white">Production + Feedback</h6>
+              </div>
+              <div class="support">
+                <div class="bar" style="--bar-width: 0%;"></div>
+                <h6 class="color-white">Dev Support</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact -->
+    <div class="contact">
+      <div class="contact-text">
+        <h2 class="weight-black">Thanks for looking</h2>
+        <h4 class="color-grey">If you want to see more design exploration, check out my
+          <a class="social-link weight-black color-black" style="--hover: #EB4C89;"
+            href="https://dribbble.com/chasturansky" target="_blank">dribbble</a> or
+          <a class="social-link weight-black color-black" style="--hover: #0757FF;"
+            href="https://www.behance.net/chasturansky" target="_blank">behance</a>
+          page.</h4>
+        <a class="button" href="mailto:chas@turansky.net">Lets work together</a>
+      </div>
+      <div class="contact-img"></div>
+    </div>
+  </div>
+
+  <!-- Modals -->
+
+
+  <!-- Icons -->
+  <svg style="display: none;">
+    <defs>
+      <symbol id="turanskyLogo" viewBox="0 0 25 25" aira-labeledby="title">
+        <title>Turansky Logo</title>
+        <path
+          d="M22.222,25V22.222H25V25Zm-2.778,0V22.222h2.778V25Zm-2.778,0H13.889V22.222h5.556V25Zm-5.555,0H8.333V22.222h5.555V25ZM5.556,25H2.778V22.222H8.333V25ZM0,25V22.222H2.778V25Zm22.222-2.778V16.667H25v5.556ZM0,22.222V16.667H2.778v5.556Zm11.111-5.556V13.889h2.778v2.778ZM0,16.667V13.889H2.778v2.778Zm11.111-2.778V11.111h2.778v2.778ZM0,13.889V5.556H2.778v8.333Zm13.889-2.778V8.333h2.778v2.778Zm-2.778,0H8.333V8.333h5.555v2.778ZM22.222,8.333V5.556H25V8.333Zm0-2.778V2.778H19.444V0h2.778V0H25V5.556ZM0,5.556V2.778H2.778V5.556ZM16.667,2.778H13.889V0h5.556V2.778Zm-5.555,0H8.333V0h5.555V2.778Zm-5.556,0H2.778V0H8.333V2.778ZM0,2.778V0H2.778V2.778Z" />
+      </symbol>
+      <symbol id="twitter" viewBox="0 0 25 25" aira-labeledby="title">
+        <title>Turansky Logo</title>
+        <path
+          d="M25,2.461a11.2,11.2,0,0,1-2.979.777,5.369,5.369,0,0,0,2.2-2.85,9.993,9.993,0,0,1-3.238,1.3A4.819,4.819,0,0,0,17.358,0a5.2,5.2,0,0,0-5.181,5.181,3.586,3.586,0,0,0,.13,1.166A14.986,14.986,0,0,1,1.684.907,5.9,5.9,0,0,0,1.036,3.5,5,5,0,0,0,3.368,7.772a4.473,4.473,0,0,1-2.332-.648h0a5.259,5.259,0,0,0,4.145,5.052,4.407,4.407,0,0,1-1.3.13,1.921,1.921,0,0,1-.907-.13,5.015,5.015,0,0,0,4.793,3.5,10.424,10.424,0,0,1-6.606,2.461A3.586,3.586,0,0,1,0,18.005a14.882,14.882,0,0,0,7.9,2.332A14.5,14.5,0,0,0,22.539,5.7V5.052A11.69,11.69,0,0,0,25,2.461Z" />
+      </symbol>
+      <symbol id="dribbble" viewBox="0 0 25 25" aira-labeledby="title">
+        <title>Turansky Logo</title>
+        <path
+          d="M81.7,139.9a12.5,12.5,0,1,0,12.5,12.5A12.463,12.463,0,0,0,81.7,139.9Zm7.878,5.777a10.459,10.459,0,0,1,2.416,6.092,54.05,54.05,0,0,0-7.143.105c-.315-.735-.525-1.366-.84-2A12.722,12.722,0,0,0,89.578,145.677ZM81.7,142a10.43,10.43,0,0,1,6.618,2.416,12.991,12.991,0,0,1-5.147,3.676,27.2,27.2,0,0,0-4.1-5.672A7.251,7.251,0,0,1,81.7,142Zm-4.727,1.155a27.434,27.434,0,0,1,4.2,5.672,26.609,26.609,0,0,1-7.983,1.155H71.616A9.836,9.836,0,0,1,76.973,143.156ZM71.2,151.98h1.786a30.2,30.2,0,0,0,9.034-1.366c.21.525.525,1.05.735,1.576l-.945.315a15.837,15.837,0,0,0-7.983,6.933,10.671,10.671,0,0,1-2.626-6.933ZM81.7,162.9a10.508,10.508,0,0,1-6.408-2.206,14.054,14.054,0,0,1,7.038-6.408c.315-.105.735-.21,1.155-.315a16.632,16.632,0,0,1,.945,3.256,48.665,48.665,0,0,1,.945,5.147A14.125,14.125,0,0,1,81.7,162.9Zm5.567-1.681a48.664,48.664,0,0,0-.945-5.147c-.21-.84-.525-1.681-.735-2.521a43.466,43.466,0,0,1,6.408,0A10.2,10.2,0,0,1,87.267,161.223Z"
+          transform="translate(-69.2 -139.9)" />
+      </symbol>
+      <symbol id="linkedin" viewBox="0 0 25 25" aira-labeledby="title">
+        <title>Turansky Logo</title>
+        <path
+          d="M19.553,23.884v-8.66c0-2.095-.7-3.632-2.653-3.632a2.946,2.946,0,0,0-2.795,1.956,3.489,3.489,0,0,0-.138,1.256v9.079H8.66V7.683h5.307v2.376A5.523,5.523,0,0,1,18.854,7.4C22.346,7.4,25,9.639,25,14.667v9.218Zm-19.133,0V7.821H5.726V23.882ZM0,2.793A2.873,2.873,0,0,1,3.072,0,2.752,2.752,0,0,1,6.005,2.793,2.873,2.873,0,0,1,2.933,5.586,2.752,2.752,0,0,1,0,2.793Z" />
+      </symbol>
+      <symbol id="arrowDown" viewBox="0 0 20 32" aira-labeledby="title">
+        <title>Down Arrow</title>
+        <path
+          d="M8.922,24.186.615,15.878,0,15.263l.616-.616L8.922,6.34a.435.435,0,0,1,.616.616L1.67,14.822H29.564a.435.435,0,0,1,0,.87H1.659L9.537,23.57a.435.435,0,1,1-.616.616Z"
+          transform="translate(-5.125 30.999) rotate(-90)" />
+      </symbol>
+      <symbol id="arrowRight" viewBox="0 0 32 20" aira-labeledby="title">
+        <title>Right Arrow</title>
+        <path id="Union_56"
+          d="M8.873,24.086.612,15.825h0L0,15.213.611,14.6,8.872,6.34a.433.433,0,0,1,.612.612L1.661,14.774H29.4a.433.433,0,0,1,0,.866H1.651l7.834,7.834a.432.432,0,1,1-.611.612Z"
+          transform="translate(30.334 24.713) rotate(180)" />
+      </symbol>
+    </defs>
+  </svg>
+  <script type="text/javascript" src="../assets/js/vanilla-tilt.js"></script>
+  <script type="text/javascript" src="../assets/js/scripts.js"></script>
+
+  <script type="text/javascript">
+    var elemtWidth = document.getElementById("blurredContainer").offsetWidth - window.innerWidth;
+    var docHeight = document.body.offsetHeight - window.innerHeight;
+
+    var playgroundContainer = document.getElementById("darkContainer");
+
+    document.addEventListener("scroll", function () {
+      var scrollPercentage = window.scrollY / docHeight;
+      var posLeft = 0 - scrollPercentage * elemtWidth;
+      document.getElementById("blurredContainer").style.left = posLeft + "px";
+
+      // Change the logo and menu color
+      var scrollPosInverse = scrollPercentage * elemtWidth;
+      var InverseAreaStart = playgroundContainer.offsetLeft;
+      var InverseAreaEnd = playgroundContainer.offsetLeft + playgroundContainer.offsetWidth;
+      // Check if Menu is on top of dark background
+      if (InverseAreaStart < scrollPosInverse + window.innerWidth - 44 && InverseAreaEnd > scrollPosInverse + window.innerWidth - 44) {
+        document.getElementById('hamburger').classList.add("inverse");
+      } else {
+        document.getElementById('hamburger').classList.remove("inverse");
+      }
+      // Check if logo is on top of dark background
+      if (InverseAreaStart < scrollPosInverse + 44 && InverseAreaEnd > scrollPosInverse + 44) {
+        document.getElementById('logo').classList.add("fill-white");
+      } else {
+        document.getElementById('logo').classList.remove("fill-white");
+      }
+    });
+  </script>
+</body>
+
+</html>

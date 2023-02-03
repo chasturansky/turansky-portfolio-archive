@@ -1,0 +1,94 @@
+.arrow {
+  height: 20px;
+  width: 20px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 2px;
+    height: 100%;
+    background: $white;
+    border-radius: 1px;
+    transform: translateX(-50%);
+    transition: 300ms;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: $white;
+    border-radius: 1px;
+    transform: translateY(-50%);
+    transition: 300ms;
+  }
+
+  div.diagonal {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: $white;
+    transform: rotate(45deg);
+    left: 9px;
+    top: 9px;
+    border-radius: 2px;
+    transition: 300ms;
+  }
+}
+
+.cta-item-article,
+.cta-item-project,
+.project-row {
+  a {
+    &:hover {
+      .arrow {
+        &::before {
+          top: 0;
+          left: 100%;
+          height: 75%;
+          transform: translateX(-100%);
+          transition: 300ms;
+        }
+
+        &::after {
+          top: 0;
+          left: 25%;
+          width: 75%;
+          transform: translateY(0%);
+          transition: 300ms;
+        }
+
+        div.diagonal {
+          height: 26px;
+          left: 9px;
+          top: -3px;
+          transition: 300ms;
+        }
+      }
+    }
+  }
+}
+
+.cta-item-project {
+  a .arrow {
+    &::before {
+      background: $black;
+    }
+    &::after {
+      background: $black;
+    }
+    div.diagonal {
+      background: $black;
+    }
+  }
+}

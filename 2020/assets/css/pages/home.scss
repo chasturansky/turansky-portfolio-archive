@@ -1,0 +1,239 @@
+.landing {
+  height: 100vh;
+  width: 100%;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.hello-container {
+  height: calc(100vh - 400px);
+  width: calc(100% - 60px);
+  max-width: 1080px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  padding-top: 80px;
+
+  @media (max-width: 880px) {
+    width: 100%;
+  }
+
+  .hello-message {
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px;
+    width: calc(100% - 60px);
+    max-width: 460px;
+
+    @media (min-width: 881px) {
+      margin: 0px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+
+      @media (max-width: 600px) {
+        font-size: 6em;
+      }
+    }
+    h3 {
+      font-size: 3.2em;
+      margin-bottom: 40px;
+    }
+  }
+
+  .hello-image {
+    display: none;
+
+    @media (min-width: 881px) {
+      display: block;
+      height: inherit;
+      flex: auto;
+      z-index: -1;
+      right: 0;
+      background-image: url("../images/bootcats@2x.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      min-width: 500px;
+    }
+  }
+}
+
+.cta-block {
+  height: 290px;
+
+  .cta-mobile {
+    margin: 30px;
+    height: 260px;
+
+    @media (min-width: 881px) {
+      display: none;
+    }
+
+    ul {
+      padding: 0px;
+      margin: 0px;
+      height: 100%;
+      display: -webkit-box;
+      overflow-y: hidden;
+      border-radius: 20px;
+
+      li {
+        height: inherit;
+        width: calc(100vw - 60px);
+
+        .cta-item-article,
+        .cta-item-project {
+          width: 100%;
+        }
+
+        .cta-item {
+          .text,
+          .date {
+            max-width: 375px;
+          }
+        }
+      }
+    }
+
+    .cta-mobile-controls {
+      margin-top: -70px;
+      background: rgba(255, 255, 255, 0.2);
+      height: 70px;
+      padding: 0px 30px;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .cta-desktop {
+    margin: 30px;
+    height: 260px;
+    display: flex;
+
+    @media (max-width: 882px) {
+      display: none;
+    }
+
+    .cta-item-article {
+      border-radius: 20px 0px 0px 20px;
+      flex: 1;
+      max-width: 33%;
+
+      @media (min-width: 881px) and (max-width: 1000px) {
+        max-width: 50%;
+      }
+    }
+
+    .cta-item-project {
+      border-radius: 0px 20px 20px 0px;
+      flex: 1;
+
+      @media (min-width: 881px) and (max-width: 1000px) {
+        width: 50%;
+      }
+
+      a {
+        display: flex;
+      }
+
+      .cta-image {
+        width: 55%;
+        height: inherit;
+        margin-left: 0%;
+        background-position: bottom center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media (max-width: 1000px) {
+          display: none;
+        }
+
+        @media (min-width: 1220px) {
+          width: 50%;
+          margin-left: 10%;
+        }
+      }
+
+      .cta-item {
+        padding-left: 0px;
+        flex: auto;
+
+        @media (max-width: 1000px) {
+          padding-left: 30px;
+        }
+      }
+    }
+
+    .cta-item {
+      height: 260px;
+
+      .text,
+      .date {
+        max-width: 280px;
+      }
+    }
+  }
+
+  .cta-item-article {
+    background: $black;
+  }
+
+  .cta-item-project {
+    background: $yellow;
+    .cta-item {
+      color: $black;
+
+      .date {
+        .plus {
+          background: $black;
+        }
+      }
+    }
+  }
+
+  .cta-item {
+    color: $white;
+    text-decoration: none;
+    padding: 0px 30px;
+    display: block;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .text {
+      width: calc(100% - 60px);
+      margin-bottom: 30px;
+      height: 78px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      h6 {
+        margin-bottom: 6px;
+      }
+    }
+
+    .date {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: calc(100% - 60px);
+
+      .plus {
+        height: 20px;
+        width: 20px;
+        background: $white;
+      }
+    }
+  }
+}

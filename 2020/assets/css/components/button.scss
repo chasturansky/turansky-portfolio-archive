@@ -1,0 +1,41 @@
+.button {
+  height: 46px;
+  width: auto !important;
+  display: inline-flex;
+  align-items: center;
+  padding: 0px 30px;
+  background: $yellow;
+  border-radius: 999px;
+  width: 102px;
+  font-family: $hl-font;
+  color: $black;
+  line-height: 1;
+  font-size: 1.6em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 300ms;
+
+  &.outline {
+    border: 2px solid $yellow;
+    background: transparent;
+
+    &:hover {
+      background: $yellow;
+    }
+  }
+
+  &.inverse {
+    color: white;
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.social-link {
+  &:hover {
+    color: var(--hover);
+    transition: 300ms;
+  }
+}

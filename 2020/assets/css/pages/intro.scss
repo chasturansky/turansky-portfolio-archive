@@ -1,0 +1,138 @@
+.welcome-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: $yellow;
+  text-align: center;
+}
+
+.hello {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0%;
+    height: 112%;
+    background: $white;
+    animation: bar-slide 2000ms $ease;
+    animation-delay: 1000ms;
+  }
+
+  h1 {
+    animation: welcome 2000ms linear;
+    animation-delay: 2000ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+}
+
+.question {
+  position: absolute;
+  width: max-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0%;
+    height: 112%;
+    background: $white;
+    animation: bar-slide 2400ms $ease;
+    animation-delay: 3000ms;
+  }
+
+  h1 {
+    animation: question 2000ms $ease;
+    animation-delay: 4000ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+}
+
+form {
+  position: absolute;
+  width: max-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeIn 1000ms ease-in-out;
+  animation-delay: 6000ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+
+  input.input {
+    font-size: 9em;
+    font-weight: 800;
+    font-family: "acumin-pro";
+    background: none;
+    outline: none;
+    border: none;
+    transform:translateY(18px);
+    text-align: center;
+    color: $white;
+
+    &::placeholder {
+      opacity: .2;
+      color: $white;
+    }
+  }
+
+  input.submit {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "acumin-pro";
+    color: $black;
+    background: none;
+    border: none;
+    opacity: .5;
+    transform:translateY(90px);
+    transition: 400ms;
+
+    &:hover {
+      opacity: 1;
+      transition: 400ms;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .hello {
+    h1 {
+      font-size: 60px;
+      line-height: 64px;
+    }
+  }
+
+  .question {
+    width: 100%;
+    h1 {
+      font-size: 60px;
+      animation: question-sm 2000ms $ease;
+      animation-delay: 4000ms;
+      opacity: 0;
+      animation-fill-mode: forwards;
+      line-height: 64px;
+    }
+  }
+
+  form > input.input {
+    font-size: 60px;
+  }
+}

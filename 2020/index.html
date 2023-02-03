@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Turansky</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Typekit -->
+  <script src="https://use.typekit.net/xwe2qxj.js"></script>
+  <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+  <!-- Cookies -->
+  <script src="assets/js/cookies.js"></script>
+</head>
+
+<body onload="checkCookieIndex()">
+
+  <div class="welcome-container">
+
+    <div class="hello">
+      <h1 class="weight-black color-white">Hello.</h1>
+    </div>
+
+    <div class="question">
+      <h1 class="weight-black color-white">What's your name?</h1>
+    </div>
+
+    <form name="myForm" onsubmit="storeValues(this)">
+      <input class="input" type="text" name="user" value="" placeholder="Name" required autofocus autocomplete="off">
+      <br>
+      <input class="submit" type="submit" value="Enter">
+    </form>
+  </div>
+
+  <script type="text/javascript" src="assets/js/scripts.js"></script>
+
+</body>
+
+</html>

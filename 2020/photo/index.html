@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" xmlns:lr="http://adobe.com/lrg/0.0"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" xmlns:lr="http://adobe.com/lrg/0.0"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" xmlns:lr="http://adobe.com/lrg/0.0"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" xmlns:lr="http://adobe.com/lrg/0.0">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Turansky | Photography</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" title="Custom Settings" href="assets/css/custom.css">
+    <script src="assets/js/libs/modernizr.custom.23122.js"></script>
+
+    <!-- Override CSS -->
+    <link rel="stylesheet" type="text/css" href="overrides/style.css">
+</head>
+
+<body class="" data-pagination-style="scroll" data-pagination-size="20">
+
+    <div id="thumbnailContainer">
+        <div class="thumbnails thumbnail-size-lg"></div>
+    </div>
+    <div id="loupeContainer" class="show-corners">
+        <div class="background"></div>
+        <div class="image-container"></div>
+        <div class="side-navigation">
+            <div class="hotspot" id="hotspotPrevLoupe">
+                <div class="button" id="buttonPrevSideLoupe">
+                    <svg version="1.1" id="svgIconPrevSideLoupe" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 57"
+                        style="enable-background:new 0 0 30 57;" xml:space="preserve">
+                        <path class="icon custom-colorable" d="M0,0v57c16.56854,0,30-12.75989,30-28.5S16.56854,0,0,0z M17.60291,33.87964
+                                c0.34692,0.3291,0.34998,0.85938,0.00708,1.18457l-1.2431,1.17828c-0.34326,0.32532-0.90277,0.32245-1.24969-0.00647
+                                L9.53137,30.9408L7,28.54163l8.20038-7.77301c0.35333-0.33508,0.92334-0.33801,1.27271-0.00671l1.26569,1.19952
+                                c0.34943,0.3313,0.34613,0.8714-0.00739,1.2063l-5.7149,5.41711L17.60291,33.87964z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="hotspot" id="hotspotNextLoupe">
+                <div class="button" id="buttonNextSideLoupe">
+                    <svg version="1.1" id="svgIconNextSideLoupe" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 57"
+                        style="enable-background:new 0 0 30 57;" xml:space="preserve">
+                        <path class="icon custom-colorable" d="M30,57V0C13.43146,0,0,12.75989,0,28.5S13.43146,57,30,57z M12.39709,23.12036
+                                c-0.34692-0.3291-0.34998-0.85938-0.00708-1.18457l1.2431-1.17828c0.34326-0.32532,0.90277-0.32245,1.24969,0.00647l5.58582,5.29523
+                                L23,28.45837l-8.20038,7.77301c-0.35333,0.33508-0.92334,0.33801-1.27271,0.00671l-1.26569-1.19952
+                                c-0.34943-0.3313-0.34613-0.8714,0.00739-1.2063l5.7149-5.41711L12.39709,23.12036z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="info-container">
+            <div id="loupeMeta"></div>
+            <ul class="lateral-nav">
+                <li id="buttonPrev">
+                    <svg version="1.1" id="svgIconPrevLoupe" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45"
+                        style="enable-background:new 0 0 45 45;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #231F20;
+                            }
+                        </style>
+                        <path class="icon custom-colorable" d="M25.20105,14.76864l-8.2004,7.773l2.5314,2.3992l5.5858,5.2952c0.3469,0.3289,0.9064,0.3318,1.2497,0.0065
+                                l1.2431-1.1783c0.3429-0.3252,0.3398-0.8555-0.0071-1.1846l-5.5864-5.2948l5.7149-5.4171c0.3535-0.3349,0.3568-0.875,0.0074-1.2063
+                                l-1.2657-1.1995C26.12435,14.43064,25.55435,14.43354,25.20105,14.76864z" />
+                    </svg>
+                </li>
+                <li class="count"><span id="countCurrent"></span> of <span id="countTotal"></span></li>
+                <li id="buttonNext">
+                    <svg version="1.1" id="svgIconNextLoupe" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45"
+                        style="enable-background:new 0 0 45 45;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #231F20;
+                            }
+                        </style>
+                        <path class="icon custom-colorable"
+                            d="M19.79895,14.76864l8.2004,7.773l-2.5314,2.3992l-5.5858,5.2952c-0.3469,0.3289-0.9064,0.3318-1.2497,0.0065
+                                l-1.2431-1.1783c-0.3429-0.3252-0.3398-0.8555,0.0071-1.1846l5.5864-5.2948l-5.7149-5.4171
+                                c-0.3535-0.3349-0.3568-0.875-0.0074-1.2063l1.2657-1.1995C18.87565,14.43064,19.44565,14.43354,19.79895,14.76864z" />
+                    </svg>
+                </li>
+            </ul>
+        </div>
+        <div id="loupeCloseButton">
+            <svg version="1.1" id="svgIconLoupeClose" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45"
+                style="enable-background:new 0 0 45 45;" xml:space="preserve">
+                <path class="shape-x custom-colorable"
+                    d="M14.77881,17.30074l5.212,5.2222l-5.0831,5.0924c-0.3476,0.3484-0.5746,0.7624-0.2308,1.1067l1.5682,1.4763
+                        c0.3436,0.3443,0.8045,0.2596,1.1521-0.0886l5.0825-5.093l5.2119,5.222c0.3536,0.3547,0.9244,0.3578,1.2741,0.0073l1.2677-1.27
+                        c0.3497-0.3507,0.3465-0.9224-0.0071-1.2768l-5.2119-5.2221l5.0828-5.0925c0.3475-0.3485,0.5429-0.8259,0.1994-1.1702
+                        l-1.6474-1.4921c-0.3438-0.3443-0.6936-0.1803-1.0411,0.1679l-5.0828,5.0929l-5.212-5.222
+                        c-0.3537-0.3546-0.9241-0.3577-1.2742-0.007l-1.2672,1.2698C14.42171,16.37464,14.42491,16.94624,14.77881,17.30074z" />
+            </svg>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var LR = LR || {};
+        LR.images = [{ "id": "332771", "exportFilename": "ice-stamp", "title": "", "caption": "" },
+        { "id": "332774", "exportFilename": "Headshot_Full", "title": "", "caption": "" },
+        { "id": "332761", "exportFilename": "Margarita", "title": "", "caption": "" },
+        { "id": "332765", "exportFilename": "Kentucky_Bourbon", "title": "", "caption": "" },
+        { "id": "332772", "exportFilename": "Whiskey_Wood_Final", "title": "", "caption": "" },
+        { "id": "332770", "exportFilename": "Seiko_Watch_revised", "title": "", "caption": "" },
+        { "id": "332763", "exportFilename": "Phoshow_Food-185", "title": "", "caption": "" },
+        { "id": "332766", "exportFilename": "Shaver", "title": "", "caption": "" },
+        { "id": "332769", "exportFilename": "Lipstick", "title": "", "caption": "" },
+        { "id": "332767", "exportFilename": "Makers", "title": "", "caption": "" },
+        { "id": "332778", "exportFilename": "2-20-16_Sarah_David_Engagement-0506", "title": "", "caption": "" },
+        { "id": "332776", "exportFilename": "2-20-16_Sarah_David_Engagement-0708", "title": "", "caption": "" },
+        { "id": "332779", "exportFilename": "Bathroom_Final3", "title": "", "caption": "" },
+        { "id": "332782", "exportFilename": "House_Exterior_FInal", "title": "", "caption": "" },
+        { "id": "332777", "exportFilename": "20160726_TapiaPhoenix-5883_copy", "title": "", "caption": "" },
+        { "id": "332780", "exportFilename": "SpencerHouse_Bath", "title": "", "caption": "" },
+        { "id": "332781", "exportFilename": "SpencerHouse_Exterior_Final", "title": "", "caption": "" },
+        { "id": "332768", "exportFilename": "20161122_IrishBuck", "title": "", "caption": "" },
+        { "id": "332775", "exportFilename": "20161202_Headshots-0142", "title": "", "caption": "" },
+        { "id": "332760", "exportFilename": "old-fashioned-0203", "title": "", "caption": "" },
+        { "id": "332762", "exportFilename": "mint-julep", "title": "", "caption": "" },
+        { "id": "332759", "exportFilename": "pink-lady-2", "title": "", "caption": "" },
+        { "id": "332764", "exportFilename": "CR3A2260", "title": "", "caption": "" },
+        { "id": "332773", "exportFilename": "CR3A2854", "title": "", "caption": "" },
+        ]        </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+body {
+  color: $black;
+
+  &.scroll-container {
+    overflow-x: hidden;
+    height: 6000px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.is-blurred {
+  filter: blur(15px);
+  transition: 300ms;
+}
+
+#blurredContainer {
+  width: calc(100% + 100% + 150% + 200%);
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0%;
+
+  @media (max-width: 1130px) {
+    width: calc(100% + 125% + 175% + 200%);
+  }
+
+  @media (max-width: 950px) {
+    width: calc(100% + 125% + 250% + 200%);
+  }
+
+  @media (max-width: 760px) {
+    width: calc(100% + 175% + 250% + 200%);
+  }
+
+  @media (max-width: 670px) {
+    width: calc(100% + 200% + 350% + 200%);
+  }
+
+  @media (max-width: 540px) {
+    width: calc(100% + 250% + 375% + 200%);
+  }
+
+  @media (max-width: 540px) {
+    width: calc(100% + 250% + 375% + 200%);
+  }
+
+  @media (max-width: 440px) {
+    width: calc(140% + 300% + 400% + 200%);
+  }
+
+  @media (max-width: 400px) {
+    width: calc(100% + 350% + 400% + 200%);
+  }
+} 

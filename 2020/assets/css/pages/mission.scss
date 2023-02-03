@@ -1,0 +1,47 @@
+.mission {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 440px) {
+    width: 140%;
+  }
+}
+
+.mission-container {
+  margin: 30px;
+  max-width: 800px;
+
+  @media (max-width: 950px) {
+    margin: 30px 100px;
+  }
+
+  @media (max-width: 670px) {
+    margin: 30px 50px;
+  }
+
+  @media (max-width: 599px) {
+    margin: 30px;
+  }
+
+  h2 {
+    color: $color-grey;
+    line-height: 1.1;
+    font-weight: 400;
+
+    @media (max-width: 599px) {
+      font-size: 4.2em;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 3.4em;
+    }
+  }
+
+  .button {
+    margin-top: 30px;
+  }
+}

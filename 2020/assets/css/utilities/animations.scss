@@ -1,0 +1,126 @@
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes turanskyLoading {
+  0% {
+    width: 0%;
+    margin-left: 0%;
+  }
+  50% {
+    width: 100%;
+    margin-left: 0%;
+  }
+  100% {
+    width: 0%;
+    margin-left: 100%;
+  }
+}
+
+@keyframes hello {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fullwidth {
+  from {
+    width: 0px;
+  }
+  to {
+    width: calc(100%);
+  }
+}
+
+@keyframes bar-slide {
+  0% {
+    width: 0%;
+    margin-left: 0px;
+  }
+  50% {
+    width: 100%;
+    margin-left: 0px;
+  }
+  100% {
+    width: 0%;
+    margin-left: 100%;
+  }
+}
+
+@keyframes welcome {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes question {
+  0% {
+    opacity: 0;
+    font-size: 7.2em;
+  }
+  5% {
+    opacity: 1;
+    font-size: 7.2em;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0px);
+    font-size: 7.2em;
+  }
+  100% {
+    font-size: 2.8em;
+    transform: translateY(-110px);
+    opacity: 1;
+  }
+}
+
+@keyframes question-sm {
+  0% {
+    opacity: 0;
+    font-size: 50px;
+  }
+  5% {
+    opacity: 1;
+    font-size: 50px;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0px);
+    font-size: 50px;
+  }
+  100% {
+    font-size: 28px;
+    transform: translateY(-110px);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,39 @@
+.icon {
+  width: 100px;
+  height: 100px;
+  fill: $black;
+
+  &.is-large {
+    width: 34px;
+    height: 34px;
+  }
+  &.is-default {
+    width: 28px;
+    height: 28px;
+  }
+  &.is-medium {
+    width: 20px;
+    height: 20px;
+  }
+  &.is-small {
+    width: 16px;
+    height: 16px;
+  }
+  &.white {
+    fill: $white;
+  }
+  &.stroke-yellow {
+    stroke: $yellow;
+    stroke-width: 2px;
+  }
+  &.stroke-white {
+    stroke: $white;
+  }
+  &.stroke-1 {
+    stroke-width: 1px;
+  }
+
+  &.fill-white {
+    fill: $white;
+  }
+}

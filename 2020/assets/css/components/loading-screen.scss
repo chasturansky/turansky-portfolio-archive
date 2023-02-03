@@ -1,0 +1,28 @@
+/* Loading Screen */
+div.loader:before,
+div.loader:after {
+  box-sizing: border-box;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  animation-name: turanskyLoading;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: $ease;
+  width: 0%;
+  margin-left: 0%;
+}
+
+div.loader::after {
+  background-color: #282828;
+  z-index: 901;
+}
+div.loader:before {
+  background-color: #FCC101;
+  z-index: 2;
+  animation-delay: .2s;
+  z-index: 900;
+}

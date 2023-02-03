@@ -1,0 +1,85 @@
+// Modal
+.menu-modal {
+  position: fixed;
+  z-index: 700;
+  width: 100%;
+  height: 100vh;
+  -webkit-transition: opacity 300ms ease-in;
+  -moz-transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-in;
+  pointer-events: none;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba($white, .7);
+  opacity: 0;
+}
+.menu-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.menu-modal > div {
+  position: absolute;
+  z-index: 800;
+  opacity: 1;
+  text-align: left;
+}
+.menu-modal > div > a {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+}
+.menu-modal > div > a > h2 {
+  color: $black;
+  transition: 250ms;
+  font-size: 60px;
+  line-height: 68px;
+  transition-timing-function: $ease;
+}
+.menu-modal > div > a:hover > h2 {
+  color: $yellow;
+  transform: translateX(30px);
+  transition: 250ms;
+  transition-timing-function: $ease;
+}
+.subcat {
+  display: flex;
+  margin-top: 60px;
+  a {
+    margin-right: 20px;
+    text-decoration: none;
+    transition: 250ms;
+    opacity: .4;
+    &:hover {
+      opacity: 1;
+      transition: 250ms;
+    }
+    h4 {
+      color: $black;
+      font-size: 22px;
+      font-weight: 300;
+    }
+  }
+}
+.subcat-social {
+  margin-top: 60px;
+  a {
+    margin-right: 20px;
+    text-decoration: none;
+    transition: 250ms;
+    &:hover {
+      opacity: .6;
+      transition: 250ms;
+    }
+    i {
+      color: $white;
+      font-size: 30px;
+    }
+  }
+}
+@media (min-width: 540px) {
+  .menu-modal > div {
+    right: 130px;
+  }
+}
